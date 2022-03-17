@@ -145,6 +145,7 @@ footer p{
         padding:1em;
         width:100%;
         text-align: center;
+        margin:0;
     }
 
     #features article img{
