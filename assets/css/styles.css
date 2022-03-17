@@ -64,10 +64,11 @@ h1{
 
 #features article{
     width:30%;
+    margin: 0em 1em;
 }
 
 #features article img{
-    width:50%;
+    width:30%;
 }
 
 #features article h3, #cta h2, #formulario h2{
