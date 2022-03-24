@@ -42,19 +42,24 @@ header nav a:hover{
     align-items: center;
 }
 
+@keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
 h1{
     font-size: 4em;
-    background-color: #597081;
     font-family: 'Roboto Slab', serif;
+
+    animation: blinker 3s cubic-bezier(0.42, 0, 0.74, 0.19) infinite;
 }
 
 #hero h2{
-    background-color: #597081;
     font-family: 'Syne', sans-serif;
 }
 
 #features, #cta, #formulario{
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +95,7 @@ h1{
     margin: 1em;
 }
 
-#cta button, #formulario input, #formulario select, #formulario textarea{
+#cta button, #formulario input, #formulario select, #formulario textarea, #formulario button{
     font-size: 1em;
     padding: 1em;
     background-color: #597081;
@@ -100,18 +105,37 @@ h1{
     font-family: 'Syne', sans-serif;
 }
 
-#cta button:hover, #formulario input:hover, #formulario select:hover, #formulario textarea:hover{
+#formulario input, #formulario select, #formulario textarea{
+    width: 100%;
+    margin: 1em 0em;
+} 
+
+::placeholder{
+    color:black;
+}
+
+#cta button:hover, #formulario button:hover{
     background-color: black;
     color:white;
+}
+
+#formulario input:hover, #formulario select:hover, #formulario textarea:hover{
+    background-color: white;
 }
 
 #formulario{
     height: 100vh;
     background-color: #a9cefa;
+    flex-direction: unset;
+}
+
+#text{
+    width: 30%;
+    margin: 0em 4em;
 }
 
 footer{
-    height:10vh;
+    height:7vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +145,7 @@ footer{
 }
 
 footer img{
-    width:6%;
+    width:4%;
 }
 
 footer p{
@@ -134,22 +158,48 @@ footer p{
         width:10%;
     }
 
-    #hero h1{
+    #hero h1, #hero h2{
         text-align: center;
     }
 
-    #features{
+    #features, #formulario{
         display: block;
     }
 
     #features article{
         padding:1em;
-        width:100%;
+        width: fit-content;
         text-align: center;
         margin:0;
     }
 
     #features article img{
         width:20%;
+    }
+
+    #formulario{
+        height: 110vh;
+    }
+
+    #formulario #text{
+        width: fit-content;
+        margin: 0em;
+        padding: 1em 0em;
+    }
+
+    #formulario input, #formulario select, #formulario textarea{
+        width: -webkit-fill-available;
+    }
+
+    #socials{
+        width: 75%;
+    }
+
+    footer p{
+        font-size: 0.7em;
+    }
+
+    footer img {
+        width: 15%;
     }
 }
