@@ -81,6 +81,10 @@ h1{
     font-family: 'Roboto Slab', serif;
 }
 
+#features article h3{
+    margin:0.8em;
+}
+
 #features article p, #cta p, #formulario p, #formulario label, #formulario input{
     font-family: 'Syne', sans-serif;
 }
@@ -132,6 +136,7 @@ h1{
 #text{
     width: 30%;
     margin: 0em 4em;
+    text-align: center;
 }
 
 footer{
