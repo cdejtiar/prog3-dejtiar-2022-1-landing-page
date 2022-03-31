@@ -135,9 +135,8 @@ h1{
 
 #text{
     width: 30%;
-    margin: 4em;
+    margin: 0em 4em;
     text-align: start;
-    align-self: baseline;
 }
 
 #formu{
