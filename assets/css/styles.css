@@ -196,6 +196,10 @@ footer p{
         padding: 1em 0em;
     }
 
+    #formulario #formu{
+        width:100%;
+    }
+
     #formulario input, #formulario select, #formulario textarea{
         width: -webkit-fill-available;
     }
