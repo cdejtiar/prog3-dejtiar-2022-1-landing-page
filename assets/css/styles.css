@@ -135,8 +135,13 @@ h1{
 
 #text{
     width: 30%;
-    margin: 0em 4em;
+    margin: 4em;
     text-align: start;
+    align-self: baseline;
+}
+
+#formu{
+    width: 50%;
 }
 
 footer{
