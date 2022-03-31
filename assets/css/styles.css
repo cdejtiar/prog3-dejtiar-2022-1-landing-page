@@ -175,6 +175,10 @@ footer p{
         display: block;
     }
 
+    #feautres{
+        height: 95vh;
+    }
+
     #features article{
         padding:1em;
         width: fit-content;
