@@ -16,10 +16,12 @@
         <header>
             <nav>
                 <img src="assets/img/phone.gif" alt="logoPhone">
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="shop.html">Comprar</a>
-                <a href="contacto.html">Contacto</a>
+                <ul>
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="shop.html">Comprar</a>
+                    <a href="contacto.html">Contacto</a>
+                </ul>
             </nav>
         </header>
 
@@ -31,28 +33,31 @@
 
             <section id="features">
                 <article>
-                    <img src="assets/img/iphone.png" alt="iPhone">
+                    <img class="uno" src="assets/img/phone-call.png" alt="phone">
                     <h3>Aprendé sobre especificaciones técnicas.</h3>
                     <p>En nuestra web, encontrarás una guía completa para entender qué celular te conviene.</p>
                 </article>
 
                 <article>
-                    <img src="assets/img/carrito.png" alt="compras">
+                    <img src="assets/img/shopping-cart.png" alt="compras">
                     <h3>Comprá desde nuestra web.</h3>
                     <p>Te vendemos todo lo necesario para que puedas sacarle todo el provecho posible a tu dispositivo.</p>
                 </article>
 
                 <article>
-                    <img src="assets/img/charla.png" alt="charla">
+                    <img src="assets/img/chat.png" alt="charla">
                     <h3>Hablá con profesionales.</h3>
                     <p>En nuestra sección de contacto, podrás ponerte en contacto con profesiones por dudas particulares.</p>
                 </article>
             </section>
 
             <section id="cta">
-                <h2>¿Qué esperas para ser parte de nuestra comunidad?</h2>
-                <p>Estamos esperándote para que puedas lograr sacar todo el jugo que tu conocimiento sobre celulares puede darte. ¡No te quedes afuera!</p>
-                <button>Ver más</button>
+                <img src="assets/img/iphone2.png" alt="phone">
+                <div id="ctaText">
+                    <h2>¿Qué esperas para ser parte de nuestra comunidad?</h2>
+                    <p>Estamos esperándote para que puedas lograr sacar todo el jugo que tu conocimiento sobre celulares puede darte. <br>¡No te quedes afuera!</p>
+                    <button>Ver más</button>
+                </div>
             </section>
 
             <section id="formulario">
@@ -61,20 +66,61 @@
                     <p>Recordá que podemos llegar a tardar hasta 72 horas hábiles en contestar tu consulta.</p>
                 </div>
                 <div id="formu">
-                    <form>
+                    <form 
+                        id="main_form"
+                        action="https://prog-3-leads-api-rest.vercel.app/leads"
+                        method="POST"
+                    >
                         <input type="text" name="nombre" id="name" placeholder="Nombre"><br>
                         <input type="email" name="email" id="email" placeholder="Email"><br>
                         <select name="sexo">
-                            <option>Sexo</option>
-                            <option>Femenino</option>
-                            <option>Masculino</option>
-                            <option>Prefiero no decirlo</option>
+                            <option disabled selected>Sexo</option>
+                            <option value="F">Femenino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Prefiero no decirlo</option>
                         </select><br>
-                        <textarea rows="10" cols="50" name="comentarios" id="comentarios" placeholder="Escriba su comentario aquí..."></textarea><br>
+                        <textarea rows="10" cols="50" name="comentarios" id="comentarios" placeholder="Escriba su comentario aquí..." style="resize: none;"></textarea><br>
                         <button>Enviar</button>
                     </form>
+                    <div class="loading_spinner">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            style="
+                            margin: auto;
+                            display: block;
+                            shape-rendering: auto;
+                            "
+                            width="21px"
+                            height="21px"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="xMidYMid"
+                            >
+                            <circle
+                            cx="50"
+                            cy="50"
+                            fill="none"
+                            stroke="#000"
+                            stroke-width="10"
+                            r="35"
+                            stroke-dasharray="164.93361431346415 56.97787143782138"
+                            transform="rotate(283.983 50 50)"
+                            >
+                            <animateTransform
+                                attributeName="transform"
+                                type="rotate"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                values="0 50 50;360 50 50"
+                                keyTimes="0;1"
+                            ></animateTransform>
+                            </circle>
+                        </svg>
+                    </div>
+                    <p class="respuesta_form"></p>
                 </div>
             </section>
+            
         </main>
 
         <footer>
@@ -87,7 +133,19 @@
 
             <p>Todos los derechos reservados. 2022.</p>
         </footer>
-
-        <script src="assets/js/main.js"></script>
     </body>
+
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+    ></script>
+        
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+        integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/js/main.js"></script>
 </html>
